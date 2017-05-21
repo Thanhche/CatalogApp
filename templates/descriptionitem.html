@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+{% block content %}
+
+<center>
+
+    <p class="category_title">{{menuItem.name}}</p>
+    <img class="img_in_descrition" src="{{menuItem.image}}" alt="{{menuItem.image}}">
+    <p class="category_title">${{menuItem.price}}</p>
+
+    <div class="description_item">
+        <p>{{menuItem.description}}</p>
+    </div>
+
+    <div class="space"></div>
+    <div class="space"></div>
+
+    <!--div>
+      {%if email_user%}
+        <a class="button" href="{{url_for('seccategoryitemMenu', category_name=category.name) }}">Go Back ..</a>
+      {% else %}
+        <a class="button" href="{{url_for('categoryitemMenu', category_name=category.name) }}">Go Back ..</a>
+      {% endif %}
+    </div-->
+
+    <div>
+        <input type="button" name="goback" onclick="goBack()" value="Go back.." />
+    </div>
+
+</center>
+
+{% endblock %}
